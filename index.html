@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerome Leue & Lucas Mattner Reinigungsservice GbR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Grundlegendes Styling */
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(90deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: fadeInDown 1s ease forwards;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+            animation: fadeInUp 1.2s ease forwards;
+        }
+
+        /* Animationen */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Service-Karten */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .service-card img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin: 10px 0;
+        }
+
+        /* Kontakt */
+        .contact {
+            background: #1e3c72;
+            color: white;
+            padding: 50px 20px;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact input, .contact textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            padding: 15px;
+            background: #f0f4f8;
+            color: #1e3c72;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact button:hover {
+            background: #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background: #2a5298;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #f0f4f8;
+        }
+
+        .footer-links {
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Jerome Leue & Lucas Mattner Reinigungsservice GbR</h1>
+        <p>Professionelle Reinigung für Büro, Treppenhaus und Privathaushalte</p>
+    </header>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="service-card">
+            <img src="https://source.unsplash.com/80x80/?cleaning" alt="Büroreinigung">
+            <h3>Büroreinigung</h3>
+            <p>Saubere Arbeitsplätze für maximale Produktivität.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://source.unsplash.com/80x80/?stairs" alt="Treppenhausreinigung">
+            <h3>Treppenhausreinigung</h3>
+            <p>Saubere Eingangsbereiche für jeden Tag.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://source.unsplash.com/80x80/?home-cleaning" alt="Privathaushalte">
+            <h3>Privathaushalte</h3>
+            <p>Frische und hygienische Räume für dein Zuhause.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://source.unsplash.com/80x80/?window-cleaning" alt="Fensterreinigung">
+            <h3>Fensterreinigung</h3>
+            <p>Glasklare Fenster, die strahlen.</p>
+        </div>
+        <div class="service-card">
+            <img src="https://source.unsplash.com/80x80/?deep-cleaning" alt="Grundreinigung">
+            <h3>Grundreinigung</h3>
+            <p>Tiefenreinigung für perfekte Hygiene.</p>
+        </div>
+    </section>
+
+    <!-- Kontaktformular -->
+    <section class="contact">
+        <h2>Kontaktieren Sie uns</h2>
+        <form action="mailto:reinigungsservice.jl@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Ihr Name" required>
+            <input type="email" name="email" placeholder="Ihre E-Mail" required>
+            <input type="text" name="phone" placeholder="Telefonnummer">
+            <textarea name="message" rows="5" placeholder="Ihre Nachricht" required></textarea>
+            <button type="submit">Anfrage senden</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <p>Jerome Leue & Lucas Mattner Reinigungsservice GbR | Wilhelmstraße 37, 38364 Schöningen</p>
+            <p>Telefon: 0174 2806456 | E-Mail: <a href="mailto:reinigungsservice.jl@gmail.com">reinigungsservice.jl@gmail.com</a></p>
+        </div>
+        <div class="footer-links">
+            <a href="#impressum">Impressum</a>
+            <a href="#agb">AGB</a>
+        </div>
+        <div id="impressum" style="margin-top:20px;">
+            <h4>Impressum</h4>
+            <p>Jerome Leue & Lucas Mattner Reinigungsservice GbR<br>
+            Wilhelmstraße 37, 38364 Schöningen<br>
+            Email: reinigungsservice.jl@gmail.com<br>
+            Telefon: 0174 2806456</p>
+        </div>
+        <div id="agb" style="margin-top:20px;">
+            <h4>AGB</h4>
+            <p>Alle Dienstleistungen erfolgen gemäß den vereinbarten Bedingungen. Preise verstehen sich inklusive MwSt. und können je nach Umfang variieren.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
