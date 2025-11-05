@@ -6,53 +6,34 @@
     <title>Jerome Leue & Lucas Mattner Reinigungsservice GbR</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Grundlegendes Styling */
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
             background-color: #f0f4f8;
             color: #333;
         }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
 
         /* Header */
         header {
-            background: linear-gradient(90deg, #1e3c72, #2a5298);
             color: white;
-            padding: 30px 20px;
+            padding: 100px 20px;
             text-align: center;
+            background: url('https://source.unsplash.com/1600x600/?cleaning,office') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
         }
+        header h1 { margin: 0; font-size: 2.5rem; animation: fadeInDown 1s ease forwards; }
+        header p { margin: 10px 0 0; font-size: 1.2rem; animation: fadeInUp 1.2s ease forwards; }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            animation: fadeInDown 1s ease forwards;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-            animation: fadeInUp 1.2s ease forwards;
-        }
-
-        /* Animationen */
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); }
         }
-
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Service-Karten */
+        /* Services */
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -61,29 +42,17 @@
             max-width: 1200px;
             margin: auto;
         }
-
         .service-card {
             background: white;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            padding: 30px 20px;
+            padding: 20px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
         }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .service-card img {
-            width: 80px;
-            margin-bottom: 20px;
-        }
-
-        .service-card h3 {
-            margin: 10px 0;
-        }
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .service-card h3 { margin: 10px 0; }
 
         /* Kontakt */
         .contact {
@@ -91,12 +60,7 @@
             color: white;
             padding: 50px 20px;
         }
-
-        .contact h2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
+        .contact h2 { text-align: center; margin-bottom: 30px; }
         .contact form {
             max-width: 600px;
             margin: auto;
@@ -104,14 +68,12 @@
             flex-direction: column;
             gap: 15px;
         }
-
         .contact input, .contact textarea {
             padding: 12px;
             border-radius: 8px;
             border: none;
             font-size: 1rem;
         }
-
         .contact button {
             padding: 15px;
             background: #f0f4f8;
@@ -122,10 +84,7 @@
             cursor: pointer;
             transition: background 0.3s;
         }
-
-        .contact button:hover {
-            background: #ddd;
-        }
+        .contact button:hover { background: #ddd; }
 
         /* Footer */
         footer {
@@ -135,11 +94,7 @@
             text-align: center;
             font-size: 0.9rem;
         }
-
-        footer a {
-            color: #f0f4f8;
-        }
-
+        footer a { color: #f0f4f8; }
         .footer-links {
             margin: 10px 0;
             display: flex;
@@ -147,7 +102,7 @@
             gap: 20px;
             flex-wrap: wrap;
         }
-
+        #impressum, #agb { margin-top: 20px; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto; }
     </style>
 </head>
 <body>
@@ -161,27 +116,27 @@
     <!-- Services -->
     <section class="services">
         <div class="service-card">
-            <img src="https://source.unsplash.com/80x80/?cleaning" alt="Büroreinigung">
+            <img src="https://source.unsplash.com/400x300/?office-cleaning" alt="Büroreinigung">
             <h3>Büroreinigung</h3>
             <p>Saubere Arbeitsplätze für maximale Produktivität.</p>
         </div>
         <div class="service-card">
-            <img src="https://source.unsplash.com/80x80/?stairs" alt="Treppenhausreinigung">
+            <img src="https://source.unsplash.com/400x300/?stairs-cleaning" alt="Treppenhausreinigung">
             <h3>Treppenhausreinigung</h3>
             <p>Saubere Eingangsbereiche für jeden Tag.</p>
         </div>
         <div class="service-card">
-            <img src="https://source.unsplash.com/80x80/?home-cleaning" alt="Privathaushalte">
+            <img src="https://source.unsplash.com/400x300/?house-cleaning" alt="Privathaushalte">
             <h3>Privathaushalte</h3>
             <p>Frische und hygienische Räume für dein Zuhause.</p>
         </div>
         <div class="service-card">
-            <img src="https://source.unsplash.com/80x80/?window-cleaning" alt="Fensterreinigung">
+            <img src="https://source.unsplash.com/400x300/?window-cleaning" alt="Fensterreinigung">
             <h3>Fensterreinigung</h3>
             <p>Glasklare Fenster, die strahlen.</p>
         </div>
         <div class="service-card">
-            <img src="https://source.unsplash.com/80x80/?deep-cleaning" alt="Grundreinigung">
+            <img src="https://source.unsplash.com/400x300/?deep-cleaning" alt="Grundreinigung">
             <h3>Grundreinigung</h3>
             <p>Tiefenreinigung für perfekte Hygiene.</p>
         </div>
@@ -209,14 +164,14 @@
             <a href="#impressum">Impressum</a>
             <a href="#agb">AGB</a>
         </div>
-        <div id="impressum" style="margin-top:20px;">
+        <div id="impressum">
             <h4>Impressum</h4>
             <p>Jerome Leue & Lucas Mattner Reinigungsservice GbR<br>
             Wilhelmstraße 37, 38364 Schöningen<br>
             Email: reinigungsservice.jl@gmail.com<br>
             Telefon: 0174 2806456</p>
         </div>
-        <div id="agb" style="margin-top:20px;">
+        <div id="agb">
             <h4>AGB</h4>
             <p>Alle Dienstleistungen erfolgen gemäß den vereinbarten Bedingungen. Preise verstehen sich inklusive MwSt. und können je nach Umfang variieren.</p>
         </div>
